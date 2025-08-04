@@ -45,7 +45,7 @@ const generateOrc = (idx) => ({
 export const useMagic = create((set, get) => {
   return {
     isCasting: true, // Whether the player is currently casting a spell
-    spell: spells[0],
+    spell: spells[2],
     setSpell: (spell) => {
       set(() => ({
         spell,

@@ -2,6 +2,8 @@
 
 This project demonstrates how easy it is to spawn any type of visual effects (VFX) in your scene using the simple engine we built together.
 
+It is part of a lesson from the course “React Three Fiber – The Ultimate Guide to 3D Web Development” by Wawa Sensei.
+
 It’s a great achievement to have built a game with React Three Fiber. Through this project, I’ve learned a lot about 3D rendering, animations, particles, and game logic.
 
 - **3D rendering**
