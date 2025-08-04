@@ -43,9 +43,9 @@ Follow these steps to set up the project locally:
 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/delafuentej/react_react-quiz.git
+git clone https://github.com/delafuentej/r3f_wizard-game.git
 
-cd react-quiz-app
+cd r3f_wizard-game
 ```
 
 2️⃣ Install dependencies
@@ -55,8 +55,9 @@ npm install
 yarn install
 ```
 
-3️⃣
+3️⃣ Start the development server
 
 ```
 npm run server
+yarn dev
 ```
