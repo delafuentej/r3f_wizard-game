@@ -4,7 +4,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 const Magic = lazy(() => import("./magic/Magic"));
 
-export const Experience = () => {
+const Experience = () => {
   return (
     <>
       <OrbitControls enabled={false} />
@@ -23,3 +23,5 @@ export const Experience = () => {
     </>
   );
 };
+
+export default Experience;

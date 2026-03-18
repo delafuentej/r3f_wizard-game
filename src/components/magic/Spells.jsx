@@ -1,8 +1,5 @@
 import { useMagic } from "../../hooks/useMagic";
-import { Void } from "./SpellsEffect/Void";
-import { Ice } from "./SpellsEffect/Ice";
-import { Fire } from "./SpellsEffect/Fire";
-import { Lightning } from "./SpellsEffect/Lightning";
+import { Lightning, Void, Ice, Fire } from "./SpellsEffect";
 
 const spellComponents = {
   Void,

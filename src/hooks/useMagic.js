@@ -173,5 +173,3 @@ export const useMagic = create((set, get) => {
     },
   };
 });
-
-console.log("state", useMagic.getState());

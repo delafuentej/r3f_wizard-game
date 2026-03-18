@@ -22,7 +22,7 @@ import { degToRad } from "three/src/math/MathUtils.js";
 // -Particles exploding going upwards
 //- Ice shards appearing on the floor
 
-export const Ice = ({ ...props }) => {
+const Ice = ({ ...props }) => {
   // to do the trail we need a ref for the VFXEmitter to cast it from the sky
   const spellEmitter = useRef();
   const time = useRef(0);
@@ -189,3 +189,4 @@ export const Ice = ({ ...props }) => {
     </group>
   );
 };
+export default Ice;

@@ -5,7 +5,7 @@ import { VFXEmitter } from "wawa-vfx";
 import { Line, PositionalAudio } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
-export const Lightning = ({ startY = 10, position = [0, 0, 0] }) => {
+const Lightning = ({ startY = 10, position = [0, 0, 0] }) => {
   const [x, y, z] = position;
   const [visible, setVisible] = useState(true);
   const [triggered, setTriggered] = useState(false);
@@ -118,3 +118,5 @@ export const Lightning = ({ startY = 10, position = [0, 0, 0] }) => {
     </group>
   );
 };
+
+export default Lightning;

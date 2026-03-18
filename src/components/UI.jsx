@@ -1,16 +1,12 @@
 import { useMagic, spells } from "../hooks/useMagic";
 
-console.log("spells", spells);
-
-export const UI = () => {
+const UI = () => {
   const spell = useMagic((state) => state.spell);
   const setSpell = useMagic((state) => state.setSpell);
   const health = useMagic((state) => state.health);
   const start = useMagic((state) => state.start);
   const gameStatus = useMagic((state) => state.gameStatus);
   const orkosKilled = useMagic((state) => state.kills);
-
-  //console.log("spell UI", spell.name);
 
   return (
     <>
@@ -61,3 +57,5 @@ export const UI = () => {
     </>
   );
 };
+
+export default UI;

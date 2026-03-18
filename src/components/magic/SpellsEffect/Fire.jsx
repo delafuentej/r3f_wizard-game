@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { PositionalAudio } from "@react-three/drei";
 import { VFXEmitter } from "wawa-vfx";
 
-export const Fire = ({ ...props }) => {
+const Fire = ({ ...props }) => {
   const spellEmitter = useRef();
   const time = useRef(0);
   useFrame((_, delta) => {

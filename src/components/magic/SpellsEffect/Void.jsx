@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { VFXEmitter } from "wawa-vfx";
 import { PositionalAudio } from "@react-three/drei";
 
@@ -20,7 +20,7 @@ import { PositionalAudio } from "@react-three/drei";
 //- the particles going in every direction
 //
 
-export const Void = ({ ...props }) => {
+const Void = ({ ...props }) => {
   console.log("props", props);
   const blastAudio = useRef();
   const gravityAudio = useRef();
@@ -159,3 +159,5 @@ export const Void = ({ ...props }) => {
     </group>
   );
 };
+
+export default Void;

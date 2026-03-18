@@ -16,7 +16,7 @@ const Magic = ({ ...props }) => {
   const wizard = useRef();
 
   const spell = useMagic((state) => state.spell);
-  console.log("spell-magic", spell);
+
   const addSpell = useMagic((state) => state.addSpell);
   const update = useMagic((state) => state.update);
 

@@ -1,10 +1,8 @@
 import { Suspense } from "react";
-import { Loader } from "@react-three/drei";
+import { Loader, Stats } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Experience } from "./components/Experience";
-import { UI } from "./components/UI";
-import { Stats } from "@react-three/drei";
-import AssetsPreload from "./components/AssetsPreload";
+import { AssetsPreload, Experience, UI } from "./components";
+
 // import Preloader from "./components/Preloader";
 
 function App() {

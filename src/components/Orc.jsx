@@ -55,7 +55,7 @@ export const Orc = ({ orc, ...props }) => {
 
     healthBar.current.scale.x = (1 * orc.health) / 100;
   });
-  console.log("healthBar", healthBar.current);
+
   return (
     <group {...props} ref={ref} position={orc.position}>
       <mesh position-y={3.5} ref={healthBar}>
