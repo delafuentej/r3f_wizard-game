@@ -1,21 +1,23 @@
 import { useMagic, spells } from "../hooks/useMagic";
-// import { spells } from "../utils";
+
+console.log("spells", spells);
 
 export const UI = () => {
   const spell = useMagic((state) => state.spell);
   const setSpell = useMagic((state) => state.setSpell);
   const health = useMagic((state) => state.health);
-  const kills = useMagic((state) => state.kills);
   const start = useMagic((state) => state.start);
   const gameStatus = useMagic((state) => state.gameStatus);
+  const orkosKilled = useMagic((state) => state.kills);
 
-  console.log("spell UI", spell.name);
+  //console.log("spell UI", spell.name);
 
   return (
     <>
       {/* section */}
-      <section className="fixed bottom-4 left-4 right-4 z-10 flex flex-col gap-4 max-w-4xl mx-auto">
+      <section className="w-full fixed bottom-4 left-4 right-4 z-10 flex flex-col gap-4 max-w-4xl mx-auto">
         {/* spells */}
+
         {gameStatus === "gameover" && (
           <h1 className="text-4xl text-white text-center">💀 Game Over</h1>
         )}
@@ -29,11 +31,11 @@ export const UI = () => {
             Play {gameStatus === "gameover" && "again"}
           </button>
         ) : (
-          <p className="text-3xl text-white">☠️ {kills}</p>
+          <p className="text-3xl text-white">☠️ {orkosKilled}</p>
         )}
-        <div className="bg-white/30 rounded-lg overflow-hidden p-4 relative">
+        <div className="bg-red-500 rounded-lg overflow-hidden p-4 relative">
           <div
-            className={"absolute top-0 left-0 bottom-0 bg-red-600/90"}
+            className={`absolute top-0 left-0 bottom-0 bg-green-500`}
             style={{
               width: health + "%",
             }}

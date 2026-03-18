@@ -1,6 +1,8 @@
+import { lazy } from "react";
+
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import Magic from "./magic/Magic";
+const Magic = lazy(() => import("./magic/Magic"));
 
 export const Experience = () => {
   return (

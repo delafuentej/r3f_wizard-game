@@ -43,6 +43,7 @@ const generateOrc = (idx) => ({
 });
 
 export const useMagic = create((set, get) => {
+  let castingTimeout;
   return {
     isCasting: true, // Whether the player is currently casting a spell
     spell: spells[2],
@@ -60,6 +61,7 @@ export const useMagic = create((set, get) => {
     addSpell: (spell) => {
       set((state) => {
         return {
+          isCasting: true,
           spells: [
             ...state.spells,
             {
@@ -78,7 +80,7 @@ export const useMagic = create((set, get) => {
       setTimeout(() => {
         get().orcs.forEach((orc) => {
           if (orc.position.distanceTo(spell.position) < 1 && orc.health > 0) {
-            orc.health -= 40;
+            orc.health -= 20;
             orc.animation = "CharacterArmature|HitReact";
             orc.lockedUntil = Date.now() + 800;
             if (orc.health <= 0) {
@@ -101,13 +103,13 @@ export const useMagic = create((set, get) => {
       setTimeout(() => {
         set((state) => ({
           spells: state.spells.filter(
-            (spell) => Date.now() - spell.time < 4000
+            (spell) => Date.now() - spell.time < 4000,
           ),
         }));
       }, spell.duration + 4000);
 
       // Stop casting
-      clearTimeout(castingTimeout);
+      //clearTimeout(castingTimeout);
       castingTimeout = setTimeout(() => {
         set(() => ({
           //when we cast a spell and set it back to false after the spell duration.

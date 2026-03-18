@@ -55,12 +55,12 @@ export const Orc = ({ orc, ...props }) => {
 
     healthBar.current.scale.x = (1 * orc.health) / 100;
   });
-
+  console.log("healthBar", healthBar.current);
   return (
     <group {...props} ref={ref} position={orc.position}>
       <mesh position-y={3.5} ref={healthBar}>
         <planeGeometry args={[1, 0.1]} />
-        <meshBasicMaterial color="red" />
+        <meshBasicMaterial color={`${orc.health > 60 ? "green" : "red"}`} />
       </mesh>
       <primitive object={clonedScene} />
     </group>

@@ -1,7 +1,8 @@
+import * as THREE from "three";
 import { Gltf } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
-import { Vector3 } from "three";
+
 import { degToRad, lerp } from "three/src/math/MathUtils.js";
 import { useMagic } from "../../hooks/useMagic";
 import VFXS from "./VFXS";
@@ -10,11 +11,12 @@ import Wizard from "../Wizard";
 import Orcs from "../Orcs";
 
 const Magic = ({ ...props }) => {
-  const pointerPosition = useRef(new Vector3(0, 0.001, 0));
+  const pointerPosition = useRef(new THREE.Vector3(0, 0.001, 0));
   const pointer = useRef();
   const wizard = useRef();
 
   const spell = useMagic((state) => state.spell);
+  console.log("spell-magic", spell);
   const addSpell = useMagic((state) => state.addSpell);
   const update = useMagic((state) => state.update);
 
@@ -30,7 +32,7 @@ const Magic = ({ ...props }) => {
           lerp(
             pointer.current.scale.x,
             2 + (Math.sin(elapsedTime * 4) + 0.5) * 1,
-            0.1
+            0.1,
           );
     }
     wizard.current.lookAt(pointerPosition.current);
